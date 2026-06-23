@@ -11,7 +11,8 @@ function StarRating({ rating }) {
       {Array.from({ length: 5 }).map((_, index) => (
         <span
           key={index}
-          className={index < roundedRating ? "text-amber-500" : "text-slate-300"}
+          className={index < roundedRating ? "text-slate-300" : "text-slate-300"}
+          style={index < roundedRating ? { color: brandColors.accent } : undefined}
           aria-hidden="true"
         >
           ★
@@ -66,7 +67,10 @@ export default async function ReviewCarousel() {
     <section id="reviews" className={`${sectionClasses} py-8`}>
       <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
-          <h2 className="text-2xl font-semibold text-slate-900">Google Reviews</h2>
+          <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: brandColors.accent }}>
+            03 / Reviews
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900">Google Reviews</h2>
           <div className="mt-2 flex items-center gap-3 text-sm text-slate-700">
             <StarRating rating={rating} />
             <span className="font-medium text-slate-900">

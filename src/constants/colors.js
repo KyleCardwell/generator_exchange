@@ -1,7 +1,8 @@
 export const brandColors = {
-  primary: "#1D4ED8",
-  secondary: "#0EA5E9",
-  accent: "#F59E0B",
-  surface: "#F8FAFC",
-  ink: "#0F172A",
+  primary: "#0a0f1a",
+  secondary: "#1a2332",
+  accent: "#d4a843",
+  surface: "#ffffff",
+  ink: "#0f172a",
+  muted: "#64748b",
 };
