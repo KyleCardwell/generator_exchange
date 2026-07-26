@@ -16,9 +16,9 @@ export default function GoogleMap() {
   return (
     <section id="find-us" className={`${sectionClasses} py-8`}>
       <div className="mb-4 flex flex-col gap-2">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: brandColors.accent }}>
+        {/* <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: brandColors.accent }}>
           04 / Find us
-        </p>
+        </p> */}
         <h2 className="text-2xl font-semibold text-slate-900">Right off Mountain View Corridor — easy in, easy out.</h2>
       </div>
 
