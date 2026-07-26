@@ -22,7 +22,7 @@ const services = [
     title: "Alternators",
     description:
       "New and remanufactured alternators for automotive, marine, agricultural, diesel, and industrial use.",
-    icon: "🔋",
+    icon: "🔧",
     features: [
       "Professional installation available",
       "Parts for nearly every type of vehicle",
@@ -34,7 +34,7 @@ const services = [
     title: "Batteries",
     description:
       "A full line of Deka batteries, made in the USA, to help get your car or truck back on the road.",
-    icon: "🔧",
+    icon: "🔋",
     features: [
       "Full line of Deka batteries, made in the USA",
       "Batteries for cars and trucks",
