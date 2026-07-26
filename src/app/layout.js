@@ -19,7 +19,7 @@ export const metadata = {
     template: "%s | Generator Exchange",
   },
   description:
-    "Family-owned since 1965. Starters, alternators, Deka batteries, and full-service auto repair in West Jordan, Utah.",
+    "Family-owned since 1965. Starters, alternators, batteries, and full-service auto repair in West Jordan, Utah.",
 };
 
 export default function RootLayout({ children }) {

@@ -33,11 +33,11 @@ const services = [
   {
     title: "Batteries",
     description:
-      "A full line of American-made Deka batteries for cars, trucks, equipment, marine, and more.",
+      "Brand-new and remanufactured batteries to help get your car or truck back on the road.",
     icon: "🔧",
     features: [
-      "Deka batteries made in the USA",
-      "Automotive, truck, marine, and deep-cycle options",
+      "Brand-new and remanufactured options",
+      "Batteries for cars and trucks",
       "Help selecting the right battery",
     ],
     href: "/batteries",
@@ -47,7 +47,7 @@ const services = [
 const stats = [
   { label: "Family owned since", value: "1965" },
   { label: "Starters & alternators in stock", value: "20K+" },
-  { label: "Battery line", value: "Deka" },
+  { label: "Batteries", value: "In stock" },
   { label: "Auto & truck care", value: "Full service" },
 ];
 
@@ -60,7 +60,7 @@ export default function Home() {
             <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">Bring it back to life.</h1>
             <p className="max-w-3xl text-base leading-7 text-white/90 sm:text-lg">
               More than 20,000 starters and alternators ready to exchange, new and remanufactured — plus
-              American-made Deka batteries and a full-service mechanic shop.
+              batteries and a full-service mechanic shop.
             </p>
 
             <div className="flex flex-wrap gap-3">

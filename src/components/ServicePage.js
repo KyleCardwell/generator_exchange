@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { brandColors } from "@/constants/colors";
 import { brandStyles, cardClasses, sectionClasses } from "@/constants/styles";
 
-export default function ServicePage({ eyebrow, title, intro, paragraphs, highlights, applications, note }) {
+export default function ServicePage({ eyebrow, title, intro, paragraphs, highlights, applications, note, image }) {
   return (
     <>
       <section style={brandStyles.heroBackground} className="text-white">
@@ -26,7 +27,23 @@ export default function ServicePage({ eyebrow, title, intro, paragraphs, highlig
         <article className={cardClasses}>
           <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: brandColors.accent }}>What we offer</p>
           <div className="mt-4 space-y-4 text-base leading-7 text-slate-700">
-            {paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {paragraphs.map((paragraph, index) => (
+              <div key={index}>
+                {image && index === 1 && (
+                  <figure className="mb-6 overflow-hidden rounded-xl border border-slate-200">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={1024}
+                      height={683}
+                      className="h-auto w-full object-cover"
+                    />
+                    <figcaption className="bg-slate-50 px-4 py-3 text-xs text-slate-500">{image.caption}</figcaption>
+                  </figure>
+                )}
+                {typeof paragraph === "string" ? <p>{paragraph}</p> : paragraph}
+              </div>
+            ))}
           </div>
           {note && <p className="mt-6 rounded-xl bg-slate-100 p-4 text-sm font-medium leading-6 text-slate-700">{note}</p>}
         </article>

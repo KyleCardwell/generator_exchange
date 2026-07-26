@@ -36,6 +36,9 @@ export default function Navbar() {
           GENERATOR EXCHANGE
         </Link>
         <nav aria-label="Main navigation" className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+          <Link href="/" className="hover:text-slate-900">
+            Home
+          </Link>
           <div ref={dropdownRef} className="relative">
             <button
               type="button"
@@ -44,7 +47,7 @@ export default function Navbar() {
               aria-expanded={servicesOpen}
               onClick={() => setOpenForPath((openPath) => openPath === pathname ? null : pathname)}
             >
-              Services <span aria-hidden="true">⌄</span>
+              Services <span aria-hidden="true" className="relative -top-[3px]">⌄</span>
             </button>
             {servicesOpen && (
               <div className="absolute left-0 top-full w-48 overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-xl">
