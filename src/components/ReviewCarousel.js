@@ -67,9 +67,9 @@ export default async function ReviewCarousel() {
     <section id="reviews" className={`${sectionClasses} py-8`}>
       <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: brandColors.accent }}>
+          {/* <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: brandColors.accent }}>
             03 / Reviews
-          </p>
+          </p> */}
           <h2 className="mt-2 text-2xl font-semibold text-slate-900">Google Reviews</h2>
           <div className="mt-2 flex items-center gap-3 text-sm text-slate-700">
             <StarRating rating={rating} />
