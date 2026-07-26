@@ -1,7 +1,9 @@
 import { brandColors } from "@/constants/colors";
 import { cardClasses } from "@/constants/styles";
 
-export default function ServiceCard({ title, description, icon, features = [] }) {
+import Link from "next/link";
+
+export default function ServiceCard({ title, description, icon, features = [], href }) {
   return (
     <article
       className={`${cardClasses} flex h-full flex-col gap-3`}
@@ -20,9 +22,9 @@ export default function ServiceCard({ title, description, icon, features = [] })
         ))}
       </ul>
 
-      <a href="#quote" className="mt-auto pt-3 text-sm font-semibold" style={{ color: brandColors.accent }}>
-        Get a quote →
-      </a>
+      <Link href={href} className="mt-auto pt-3 text-sm font-semibold" style={{ color: brandColors.accent }}>
+        Learn more →
+      </Link>
     </article>
   );
 }

@@ -1,6 +1,4 @@
-import Footer from "@/components/Footer";
 import GoogleMap from "@/components/GoogleMap";
-import Navbar from "@/components/Navbar";
 import QuoteForm from "@/components/QuoteForm";
 import ReviewCarousel from "@/components/ReviewCarousel";
 import ServiceCard from "@/components/ServiceCard";
@@ -11,58 +9,58 @@ const services = [
   {
     title: "Starters",
     description:
-      "Exchange starters for domestic, import, and heavy-equipment applications with in-house bench testing.",
+      "New and remanufactured starters for everything from daily drivers to industrial equipment.",
     icon: "⚙️",
     features: [
-      "Starter exchange service",
-      "Domestic, import, and heavy-equipment support",
-      "Every unit bench-tested before delivery",
+      "Electric and hydraulic starters",
+      "ATV, marine, diesel, tractor, and industrial",
+      "Exchange from our extensive in-stock inventory",
     ],
+    href: "/starters",
   },
   {
     title: "Alternators",
     description:
-      "Remanufactured alternators built to OEM specs, professionally installed, and load-tested before you leave.",
+      "New and remanufactured alternators for automotive, marine, agricultural, diesel, and industrial use.",
     icon: "🔋",
     features: [
-      "Remanufactured to OEM specifications",
       "Professional installation available",
-      "Load-tested for dependable output",
+      "Parts for nearly every type of vehicle",
+      "In-house testing and experienced rebuilders",
     ],
+    href: "/alternators",
   },
   {
     title: "Batteries",
     description:
-      "New automotive, marine, and deep-cycle batteries with free charge/load testing and old-battery recycling.",
+      "A full line of American-made Deka batteries for cars, trucks, equipment, marine, and more.",
     icon: "🔧",
     features: [
-      "Free charge and load testing",
-      "Automotive, marine, and deep-cycle options",
-      "Old-battery recycling on-site",
+      "Deka batteries made in the USA",
+      "Automotive, truck, marine, and deep-cycle options",
+      "Help selecting the right battery",
     ],
+    href: "/batteries",
   },
 ];
 
 const stats = [
-  { label: "Years in the valley", value: "0+" },
-  { label: "Units remanufactured", value: "0K+" },
-  { label: "Warranty", value: "0yr+" },
-  { label: "Most exchanges", value: "Same-day" },
+  { label: "Family owned since", value: "1965" },
+  { label: "Starters & alternators in stock", value: "20K+" },
+  { label: "Battery line", value: "Deka" },
+  { label: "Auto & truck care", value: "Full service" },
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <Navbar />
-
-      <main>
+    <>
         <section style={brandStyles.heroBackground} className="text-white">
           <div className={`${sectionClasses} flex flex-col gap-6 py-16 md:py-24`}>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/90">GENERATOR EXCHANGE</p>
             <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">Bring it back to life.</h1>
             <p className="max-w-3xl text-base leading-7 text-white/90 sm:text-lg">
-              Remanufactured starters and alternators, plus new batteries — bench-tested, installed by our in-house
-              mechanic, and most done the same day.
+              More than 20,000 starters and alternators ready to exchange, new and remanufactured — plus
+              American-made Deka batteries and a full-service mechanic shop.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -98,11 +96,12 @@ export default function Home() {
                 description={service.description}
                 icon={service.icon}
                 features={service.features}
+                href={service.href}
               />
             ))}
           </div>
 
-          <div id="how-it-works" className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div id="about" className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: brandColors.accent }}>
               02 / What&apos;s inside
             </p>
@@ -118,15 +117,17 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <p className="mt-5 max-w-4xl text-sm leading-6 text-slate-600">
+              Generator Exchange is a locally owned family business established in 1965. Today, Mike and Scott
+              Carter carry on the business founded by their father, Ron Carter, serving drivers, mechanics,
+              businesses, and equipment owners throughout the Intermountain West.
+            </p>
           </div>
         </section>
 
         <ReviewCarousel />
         <QuoteForm />
         <GoogleMap />
-      </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }
