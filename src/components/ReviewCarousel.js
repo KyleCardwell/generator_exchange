@@ -1,7 +1,6 @@
-import { headers } from "next/headers";
-
 import { brandColors } from "@/constants/colors";
 import { cardClasses, sectionClasses } from "@/constants/styles";
+import { getGoogleReviews } from "@/lib/googleReviews";
 
 function StarRating({ rating }) {
   const roundedRating = Math.max(0, Math.min(5, Math.round(rating ?? 0)));
@@ -23,17 +22,9 @@ function StarRating({ rating }) {
 }
 
 async function getReviewsData() {
-  const headerStore = await headers();
-  const host = headerStore.get("x-forwarded-host") ?? headerStore.get("host") ?? "localhost:3000";
-  const protocol =
-    headerStore.get("x-forwarded-proto") ??
-    (host.includes("localhost") || host.startsWith("127.0.0.1") ? "http" : "https");
+  const { data, status } = await getGoogleReviews();
 
-  const response = await fetch(`${protocol}://${host}/api/reviews`, {
-    next: { revalidate: 3600 },
-  });
-
-  if (!response.ok) {
+  if (status < 200 || status >= 300) {
     return {
       rating: null,
       userRatingsTotal: null,
@@ -41,7 +32,6 @@ async function getReviewsData() {
     };
   }
 
-  const data = await response.json();
   const result = data?.result ?? {};
 
   return {
