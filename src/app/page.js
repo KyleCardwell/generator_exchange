@@ -110,7 +110,7 @@ export default function Home() {
           ))}
         </div>
 
-        <h2 className="mt-16 text-2xl font-semibold text-slate-900">
+        <h2 className="mt-24 text-2xl font-semibold text-slate-900">
           About Generator Exchange
         </h2>
         <div
@@ -127,16 +127,16 @@ export default function Home() {
                 className="rounded-xl border border-slate-200 bg-slate-50 p-4"
               >
                 <p
-                  className="text-xl font-bold"
-                  style={{ color: brandColors.ink }}
-                >
-                  {stat.value}
-                </p>
-                <p
                   className="mt-1 text-sm"
                   style={{ color: brandColors.muted }}
                 >
                   {stat.label}
+                </p>
+                <p
+                  className="text-xl font-bold"
+                  style={{ color: brandColors.ink }}
+                >
+                  {stat.value}
                 </p>
               </div>
             ))}
