@@ -124,17 +124,15 @@ export default function Home() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                className="rounded-xl border border-white/10 p-4"
+                style={{ backgroundColor: brandColors.primary }}
               >
-                <p
-                  className="mt-1 text-sm"
-                  style={{ color: brandColors.muted }}
-                >
+                <p className="mt-1 text-sm text-white/80">
                   {stat.label}
                 </p>
                 <p
                   className="text-xl font-bold"
-                  style={{ color: brandColors.ink }}
+                  style={{ color: brandColors.accent }}
                 >
                   {stat.value}
                 </p>
@@ -142,7 +140,7 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-5 max-w-4xl text-sm leading-6 text-slate-600">
-            Generator Exchange is a locally owned family business established in
+            Generator Exchange is a locally owned&#44; family business established in
             1965. Today, Mike and Scott Carter carry on the business founded by
             their father, Ron Carter, serving drivers, mechanics, businesses,
             and equipment owners throughout the Intermountain West.
