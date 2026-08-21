@@ -46,24 +46,52 @@ export default function QuoteForm() {
 
       <form onSubmit={handleSubmit} className="grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:grid-cols-2">
         <label className="flex flex-col gap-2 text-sm font-medium text-slate-800">
-          Name
+          <span>
+            Name <span className="text-red-600">*</span>
+          </span>
           <input className={inputClasses} type="text" name="name" autoComplete="name" required maxLength={100} />
         </label>
 
         <label className="flex flex-col gap-2 text-sm font-medium text-slate-800">
-          Phone
+          <span>
+            Phone <span className="text-red-600">*</span>
+          </span>
           <input className={inputClasses} type="tel" name="phone" autoComplete="tel" required maxLength={30} />
         </label>
 
+        <label className="flex flex-col gap-2 text-sm font-medium text-slate-800">
+          Application (Year/Make/Model/Engine, optional)
+          <input
+            className={inputClasses}
+            type="text"
+            name="application"
+            maxLength={200}
+            placeholder="Example: 2019 Ford F-150 3.5L"
+          />
+        </label>
+
+        <label className="flex flex-col gap-2 text-sm font-medium text-slate-800">
+          Part # (from alternator tag, optional)
+          <input
+            className={inputClasses}
+            type="text"
+            name="partNumber"
+            maxLength={100}
+            placeholder="Leave blank if you can't find it"
+          />
+        </label>
+
         <label className="grid gap-2 text-sm font-medium text-slate-800 md:col-span-2">
-          Message
+          <span>
+            Message <span className="text-red-600">*</span>
+          </span>
           <textarea
             className={inputClasses}
             name="message"
             rows={5}
             required
             maxLength={2000}
-            placeholder="Year, make, model, engine size, and what you need help with"
+            placeholder="Tell us what the alternator is doing (or not doing)"
           />
         </label>
 

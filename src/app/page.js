@@ -57,10 +57,10 @@ export default function Home() {
       <section style={brandStyles.heroBackground} className="text-white">
         <div className={`${sectionClasses} flex flex-col gap-6 py-16 md:py-24`}>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/90">
-            GENERATOR EXCHANGE
+            TRUSTED PROFESSIONALS
           </p>
           <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-            Bring it back to life.
+            Your Starter & Alternator Resource
           </h1>
           <p className="max-w-3xl text-base leading-7 text-white/90 sm:text-lg">
             More than 20,000 starters and alternators ready to exchange, new and
